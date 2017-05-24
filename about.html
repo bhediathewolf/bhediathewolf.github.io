@@ -1,0 +1,32 @@
+---
+title: About
+description: This line is basically me telling you that I would be telling you about me before I tell you about me.
+image: https://source.unsplash.com/BcoGknSqlDc/2000x1322?a=.png
+---
+
+<section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
+	<div class="inner-hero text-container">
+		<div class="hero-text-container">
+			<h1 class="editable">My Story</h1>
+			<p class="subtext editable">My name is Sannidhya Sandheer. I am a computer engineer(to be), studying at (not) one of the finest institutions in India; NMIMS, Shirpur.</p>
+            <p class="subtext editable">This is (obviously) my blog. The blog is an outlet for ideas. It is also a subtle attempt at a conversation that I hope you, my dear visitor, engage me in.</p>
+            <p class="subtext editable">I am always quite intrigued by Scandinavian culture. The name of the blog, 'Leita', is an Icelandic verb that means 'to search'. In a way, this blog is my search for something, which I find hard to define at the moment. It is also, a documentation of this very vague search.</p>
+		</div>
+	</div>
+</section>
+
+{% comment %}
+<section class="pad">
+	<div class="container">
+		<ul class="staff">
+			{% for person in site.staff_members %}
+				<li>
+					<div class="square-image" style="background-image: url({% include relative-src.html src=person.image_path %})"></div>
+					<div class="name"><a target="_blank" href="https://twitter.com/{{ person.twitter_username }}">{{ person.name }}</a></div>
+					<div class="position">{{ person.position }}</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
+{% endcomment %}
