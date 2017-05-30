@@ -8,13 +8,6 @@ layout: page
         	<div class="post-content">
 			{{ content }}
 
-			<div class="author">
-				{% assign author_id = page.author_staff_member | prepend: "/staff_members/" | append: "/" %}
-				{% assign author = site.staff_members | where: "url", author_id | first %}
-				<div class="square-image" style="background-image: url('{% include relative-src.html src=author.image_path %}')"></div>
-				<p class="blurb">{{ author.blurb }}</p>
-			</div>
-
 			<div class="blog-navigation">
 				{% if page.previous.url %}
 					<a class="prev" href="{% include relative-src.html src=page.previous.url %}">&laquo; {{ page.previous.title }}</a>
@@ -25,7 +18,6 @@ layout: page
 			</div>
 
             {% if site.addthis %}
-            <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-592d91bdaa5b6ab8"></script> 
             <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-592d91bdaa5b6ab8"></script> 
             {% endif %}
 
@@ -50,9 +42,7 @@ layout: page
 				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 			{% endif %}
 
-            {% if site.addthis %}
             <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_relatedposts_inline"></div>
-            {% endif %}
 
 		</div>
 	</div>
