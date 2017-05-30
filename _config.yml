@@ -30,7 +30,6 @@ gems:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-archives
 
 exclude:
   - Gemfile
@@ -40,13 +39,6 @@ exclude:
 
 paginate: 10
 paginate_path: "/blog/:num/"
-
-jekyll-archives:
-  enabled: 
-    - categories
-  layout: 'archive'
-  permalinks:
-    category: '/category/:name/'
 
 defaults:
   -
