@@ -26,6 +26,7 @@ layout: page
 
             {% if site.addthis %}
             <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-592d91bdaa5b6ab8"></script> 
+            <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-592d91bdaa5b6ab8"></script> 
             {% endif %}
 
 			{% if site.disqus_shortname and page.comments %}
@@ -48,6 +49,11 @@ layout: page
 				</script>
 				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 			{% endif %}
+
+            {% if site.addthis %}
+            <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_relatedposts_inline"></div>
+            {% endif %}
+
 		</div>
 	</div>
 </section>
