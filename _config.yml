@@ -44,8 +44,6 @@ paginate_path: "/blog/:num/"
 jekyll-archives:
   enabled: ['categories']
   layout: 'archive'
-  permalinks:
-      category: '/category/:name/'
 
 defaults:
   -
