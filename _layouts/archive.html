@@ -14,9 +14,14 @@ layout: default
 <section>
 	<div class="text-container">
 		<p class="change-category">All posts categorised under <strong>{{ page.category }}</strong>. <a href="{{ site.baseurl }}/blog/">View all posts</a> instead.</p>
-		{% capture site.categories.category %}{{ page.category }}{% endcapture %}
+		{% capture scc %}{{ page.category }}{% endcapture %}
 		<ul class="blog-posts">
-                	{% include list-posts.html posts=site.categories.category %}
+			{% case scc %}
+			    {% when 'friendship' %}
+                		{% include list-posts.html posts=site.categories.friendship %}
+			    {% when 'science' %}
+				{% include list-posts.html posts=site.categories.science %}
+			    {% endcase %}
 		</ul>
         <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-592d91bdaa5b6ab8"></script> 
 	</div>
