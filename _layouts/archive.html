@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{%- capture scc -%}{{ page.category }}{%- endcapture -%}
+{% capture scc %}{{ page.category }}{% endcapture %}
 {%- case scc -%}
     {%- when 'cars' -%}
     {%- assign header = "Cars" -%}
