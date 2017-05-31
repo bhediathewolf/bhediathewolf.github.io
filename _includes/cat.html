@@ -1,0 +1,23 @@
+{% case include.scc %}
+    {% when 'cars' %}
+    {% assign header = "Cars" %}
+    {% assign sub = "Not a matter of convenience, but an extension of man" %}
+    {% assign img = "https://source.unsplash.com/u6BPMXgURuI/2000x1322" %}
+    {% when 'culture' %}
+    {% assign header = "Culture" %}
+    {% assign sub = "The nuances of our society" %}
+    {% assign img = "https://source.unsplash.com/oLhTLD-RBsc/2000x1322" %}
+    {% when 'reviews' %}
+    {% assign header = "Reviews" %}
+    {% assign sub = "The n-th perspective" %}
+    {% assign img = "https://source.unsplash.com/Wg7bvfDf6Ss/2000x1322" %}
+    {% when 'science' %}
+    {% assign header = "Science" %}
+    {% assign sub = "Curiosity killed the cat" %}
+    {% assign img = "https://source.unsplash.com/UmncJq4KPcA/2000x1322" %}
+    {% when 'technology' %}
+    {% assign header = "Technology" %}
+    {% assign sub = "Future is sporadically now" %}
+    {% assign img = "https://source.unsplash.com/mH2v8Aw-ZTM/2000x1322" %}
+{% endcase %}
+
