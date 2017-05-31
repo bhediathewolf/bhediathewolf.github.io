@@ -3,8 +3,8 @@ title: Development Issues
 date: 2016-08-06
 description: How do development issues affect friendship?
 categories:
-  - friendship
-  - psychology
+  - culture
+  - science
 image: https://source.unsplash.com/collection/375719/2000x1322?a=.png
 author_staff_member: james
 ---
