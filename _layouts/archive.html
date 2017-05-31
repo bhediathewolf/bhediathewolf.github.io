@@ -2,28 +2,28 @@
 layout: default
 ---
 {% capture scc %}{{ page.category }}{% endcapture %}
-{%- case scc -%}
-    {%- when 'cars' -%}
+{% case scc %}
+    {% when 'cars' %}
     {%- assign header = "Cars" -%}
     {%- assign sub = "Feel in absolute control" -%}
     {%- assign img = "https://source.unsplash.com/N9Pf2J656aQ/2000x1322" | url_encode -%}
-    {%- when 'culture' -%}
+    {% when 'culture' %}
     {%- assign header = "Culture" -%}
     {%- assign sub = "Nuances of our society" -%}
     {%- assign img = "https://source.unsplash.com/oLhTLD-RBsc/2000x1322" | url_encode -%}
-    {%- when 'reviews' -%}
+    {% when 'reviews' %}
     {%- assign header = "Reviews" -%}
     {%- assign sub = "The n-th perspective" -%}
     {%- assign img = "https://source.unsplash.com/Wg7bvfDf6Ss/2000x1322" | url_encode -%}
-    {%- when 'science' -%}
+    {% when 'science' %}
     {%- assign header = "Science" -%}
     {%- assign sub = "Curiosity killed the cat" -%}
     {%- assign img = "https://source.unsplash.com/QJHzMkfrJpI/2000x1322" | url_encode -%}
-    {%- when 'technology' -%}
+    {% when 'technology' %}
     {%- assign header = "Technology" -%}
     {%- assign sub = "Future is sporadically now" -%}
     {%- assign img = "https://source.unsplash.com/oZPwn40zCK4/2000x1322" | url_encode -%}
-{%- endcase -%}
+{% endcase %}
     <section class="hero" style="background-image: url({{ img }})">
 	<div class="inner-hero text-container">
 		<div class="hero-text-container">
