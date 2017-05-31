@@ -14,6 +14,17 @@ image: https://source.unsplash.com/7B6BFC2E5tA/2000x1322?a=.png
 </section>
 
 <section>
+    <div class="container">
+        <ul class="staff">
+            {% for category in site.categories %}
+                <li>
+                    <div class="square-image" style="background-image:url()"></div>
+                    <div class="name"><a target="_blank" href="">{{ category }}</a></div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
 	<div class="text-container">
 		<ul class="blog-posts">
 			{% include list-posts.html posts=paginator.posts %}
