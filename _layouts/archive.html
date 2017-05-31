@@ -16,7 +16,7 @@ layout: default
 		<p class="change-category">All posts categorised under <strong>{{ page.title }}</strong>. <a href="{{ site.baseurl }}/blog/">View all posts</a> instead.</p>
 
 		<ul class="blog-posts">
-            {% include list-posts.html posts=site.categories.[page.title] %}
+            {% include list-posts.html posts=site.categories.[page.category] %}
 		</ul>
         <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-592d91bdaa5b6ab8"></script> 
 	</div>
