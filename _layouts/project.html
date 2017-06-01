@@ -7,7 +7,7 @@ layout: default
 {% if project.image %}
     {% assign image = project.image %}
 {% else %}
-    {% assign image = "https://source.unsplash.com/4pPzKfd6BEg/2000x1322/a?=.png" %}
+    {% capture image %}https://source.unsplash.com/4pPzKfd6BEg/2000x1322/a?=.png{% endcapture %}
 {% endif %}
 
 <section class="hero" style="background-image: url({% include relative-src.html src=image %})">
@@ -35,7 +35,7 @@ layout: default
                         <li>
                             {% if project_tab == "demo" %}
                                 {% capture project_demo_url %}/project/{{ page.project }}/demo/{% endcapture %}
-                                {% if page.url !+ project_demo_url %}
+                                {% if page.url != project_demo_url %}
                                     <div class="button"><a href="/project/{{page.project }}/demo/">Demo</a></div>
                                 {% else %}
                                 <div class="button"><a href="#">Demo</a></div>
