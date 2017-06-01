@@ -25,7 +25,7 @@ image: https://source.unsplash.com/7B6BFC2E5tA/2000x1322?a=.png
   	        {% else %}
         	    {% for category in categories_list %}
                 <li>
-                    <a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category[0] | capitalize }} ({{ category[1].size }})</a></li>
+                    <a href="#{{ tag[0] }}">{{ category[0] | capitalize }} ({{ category[1].size }})</a></li>
             	{% endfor %}
   	        {% endif %}
 	        {% assign categories_list = nil %}
