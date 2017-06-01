@@ -1,0 +1,38 @@
+---
+title: Projects
+description: All the cool stuff!
+image: https://source.unsplash.com/MqJX_8EaStM/2000x1322?a=.png
+---
+
+<section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
+    <div class="inner-hero text-container">
+        <div class="hero-text-conatiner">
+            <h1 class="editable">The Shed</h1>
+            <p class="subtext editable">Check out what I have been working on!</p>
+        </div>
+    </div>
+</section>
+
+<section>
+{% if site.data.projects.size > 0 %}
+  <div class="text-container">
+    {% for project_data in site.data.projects %}
+      {% assign project_slug = project_data[0] %}
+      {% assign project = project_data[1] %}
+      <a href="/project/{{ project_slug }}/" class="list-group-item p-t-0 p-l-0 p-b-0">
+        <div class="media m-b-0">
+          <div class="media-left">
+            <img class="media-object" src="/assets/{{ project_slug }}/cover-image.png" alt="{{ project.title }} cover image">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{ project.title }}</h4>
+            {% if project.subtitle %}<p class="hidden-xs-down m-b-0">{{ project.subtitle }}</p>{% endif %}
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>There are no projects on {{ site.domain }}</p>
+{% endif %}
+</section>
