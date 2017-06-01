@@ -22,6 +22,8 @@ social:
     - https://bhediathewolf.github.io/
 
 # Build
+markdown: kramdown
+highlighter: rouge
 
 permalink: pretty
 
