@@ -7,7 +7,7 @@ layout: default
 {% if project.image %}
     {% assign image = project.image %}
 {% else %}
-    {% capture image %}https://source.unsplash.com/4pPzKfd6BEg/2000x1322/a?=.png{% endcapture %}
+    {% capture image %}https://source.unsplash.com/4pPzKfd6BEg/2000x1322?a=.png{% endcapture %}
 {% endif %}
 
 <section class="hero" style="background-image: url({% include relative-src.html src=image %})">
