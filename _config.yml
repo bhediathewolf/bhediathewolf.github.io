@@ -36,6 +36,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENCE
+  - vendor
 
 paginate: 10
 paginate_path: "/blog/:num/"
