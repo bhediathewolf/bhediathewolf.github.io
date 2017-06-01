@@ -8,13 +8,14 @@ layout: default
 <section class="hero" style="background-image: url({% include relative-src.html src=page.html %})">
     <div class="inner-hero text-container">
         <h1>{{ project.title }}</h1>
-        <p class="subtext"><< project.subtitle }}</p>
+        <p class="subtext">{{ project.subtitle }}</p>
     </div>
 </section>
 
 <section>
     <div class="blog-ppost text-container">
         <div class="post-content">
+            {% if project %}
                 <ul class="nav nav-inline text-uppercase m-b-3">
                     <li class="nav-item">
                         {% if project_tab != "" %}
@@ -72,6 +73,9 @@ layout: default
                 {% else %}
                     {{ content }}
                 {% endif %}
+            {% else %}
+                <p>There is no project</p>
+            {% endif %}
         </div>
     </div>
 </section>
