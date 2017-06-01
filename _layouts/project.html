@@ -7,8 +7,10 @@ layout: default
 
 <section class="hero" style="background-image: url({% include relative-src.html src=page.html %})">
     <div class="inner-hero text-container">
-        <h1>{{ project.title }}</h1>
-        <p class="subtext">{{ project.subtitle }}</p>
+        <div class="hero-text-container">
+            <h1 class="editable">{{ project.title }}</h1>
+            <p class="subtext editable">{{ project.subtitle }}</p>
+        </div>
     </div>
 </section>
 
@@ -16,65 +18,65 @@ layout: default
     <div class="blog-post text-container">
         <div class="post-content">
             {% if project %}
-                <ul class="nav nav-inline text-uppercase m-b-3">
-                    <li class="nav-item">
+                <ul class="blog-post">
+                    <li class="blog-post">
                         {% if project_tab != "" %}
-                            <a class="nav-link p-a-1" href="/project/{{ page.project }}/">Overview</a>
+                            <div class="button"><a href="/project/{{ page.project }}/">Overview</a></div>
                         {% else %}
-                            <a class="nav-link p-a-1 active" href="#">Overview</a>
+                            <div class="button"><a class="nav-link p-a-1 active" href="#">Overview</a></div>
                         {% endif %}
                     </li>
                     {% if project.has_gallery %}
-                        <li class="nav-item">
+                        <li class="blog-post">
                             {% if project_tab == "gallery" %}
-                                <a class="nav-link p-a-1 active" href="#">Gallery</a>
+                                <div class="button"><a href="#">Gallery</a></div>
                             {% else %}
-                                <a class="nav-link p-a-1" href="/project/{{ page.project }}/gallery/">Gallery</a>
+                                <div class="button"><a href="/project/{{ page.project }}/gallery/">Gallery</a></div>
                             {% endif %}
                         </li>
                     {% endif %}
                     {% if project.has_demo %}
-                        <li class="nav-item">
+                        <li class="blog-post">
                             {% if project_tab == "demo" %}
                                 {% capture project_demo_url %}/project/{{ page.project }}/demo/{% endcapture %}
                                 {% if page.url !+ project_demo_url %}
-                                    <a class="nav-link p-a-1" href="/project/{{page.project }}/demo/">Demo</a>
+                                    <div class="button"><a href="/project/{{page.project }}/demo/">Demo</a></div>
                                 {% else %}
-                                    <a class="nav-link p-a-1 active" href="#">Demo</a>
+                                <div class="button"><a class="nav-link p-a-1 active" href="#">Demo</a></div>
                                 {% endif %}
                             {% else %}
-                                <a class="nav-link p-a-1" href="/project/{{ page.project }}/demo/">Demo</a>
+                                <div class="button"><a class="nav-link p-a-1" href="/project/{{ page.project }}/demo/">Demo</a></div>
                             {% endif %}
                         </li>
                     {% endif %}
                     {% if project.has_changelog %}
-                        <li class="nav-item">
+                        <li class="blog-post">
                             {% if project_tab == "changelog" %}
-                                <a class="nav-link p-a-1 active" href="#">Changelog</a>
+                                <div class="button"><a href="#">Changelog</a></div>
                             {% else %}
-                                <a class="nav-link p-a-1" href="/project/{{ page.project }}/changelog/">Changelog</a>
+                                <div class="button"><a href="/project/{{ page.project }}/changelog/">Changelog</a></div>
                             {% endif %}
                         </li>
                     {% endif %}
                     {% if project.has_github %}
-                        <li class="nav-item"><a class="nav-link p-a-1" href="{{ project.github }}">Github</a></li>
+                        <li class="blog-post"><div class="button"><a href="{{ project.github }}">Github</a></div></li>
                     {% endif %}
                 </ul>
                 {% if project_tab == "gallery" %}
                     {% if project.gallery %}
                         {% for image in project.gallery %}
                             {% capture image_url %}/assests/{{ page.project }}/{{ image }}{% endcapture %}
-                            <img class="img-fluid center-block m-b-2 b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="{{ image_url }}">
+                            <div class="image"><img class="editable" src=data:image/gif data-src="{{ image_url }}" /></div>
                         {% endfor %}
-                        <script>+(function() {new Blazy();})();</script>
+                        <script src="/assets/blazy.min.js">+(function() {new Blazy();})();</script>
                     {% else %}
-                        <p>There is no gallery for this project.</p>
+                        <p class="editable">There is no gallery for this project.</p>
                     {% endif %}
                 {% else %}
                     {{ content }}
                 {% endif %}
             {% else %}
-                <p>There is no project</p>
+                <p class="editable">There is no project</p>
             {% endif %}
         </div>
     </div>
