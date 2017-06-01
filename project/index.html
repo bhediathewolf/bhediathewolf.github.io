@@ -23,10 +23,6 @@ layout: default
          {% assign project = project_data[1] %}
          <li class="blog-post">
              <h2><a href="/project/{{ project_slug }}/">{{ project.title }}</a></h2>
-             {% comment %} include post-title.html {% endcomment %}
-             <div class="image">
-                 <img class="editable" src="/assets/{{ project_slug }}/cover-image.png" alt="{{ project.title }}" />
-             </div>
              <div class="post-content">
                  {{ project.excerpt }}
                  <div class="button"><a href="/project/{{ project_slug }}/">Read More</a></div>
