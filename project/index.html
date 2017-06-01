@@ -15,25 +15,24 @@ layout: default
 </section>
 
 <section>
-{% if site.data.projects.size > 0 %}
   <div class="text-container">
-    {% for project_data in site.data.projects %}
-      {% assign project_slug = project_data[0] %}
-      {% assign project = project_data[1] %}
-      <a href="/project/{{ project_slug }}/" class="list-group-item p-t-0 p-l-0 p-b-0">
-        <div class="media m-b-0">
-          <div class="media-left">
-            <img class="media-object" src="/assets/{{ project_slug }}/cover-image.png" alt="{{ project.title }} cover image">
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">{{ project.title }}</h4>
-            {% if project.subtitle %}<p class="hidden-xs-down m-b-0">{{ project.subtitle }}</p>{% endif %}
-          </div>
-        </div>
-      </a>
-    {% endfor %}
+      <p class="change-category">All the projects I want you to know about:</p>
+      <ul class="blog-posts">
+      {% for project_data in site.data.projects %}
+         {% assign project_slug = project_data[0] %}
+         {% assign project = project_data[1] %}
+         <li class="blog-post">
+             <h2><a href="/project/{{ project_slug }}/">{{ project.title }}</a></h2>
+             {% comment %} include post-title.html {% endcomment %}
+             <div class="image">
+                 <img class="editable" src="/assets/{{ project_slug }}/cover-image.png" alt="{{ project.title }}" />
+             </div>
+             <div class="post-content">
+                 {{ project.excerpt }}
+                 <div class="button"><a href="/project/{{ project_slug }}/">Read More</a></div>
+             </div>
+         </li>
+       {% endfor %}
+      </ul>
   </div>
-{% else %}
-  <p>There are no projects on {{ site.domain }}</p>
-{% endif %}
 </section>
