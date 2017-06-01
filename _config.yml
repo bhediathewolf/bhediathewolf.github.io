@@ -58,6 +58,11 @@ defaults:
       path: "contact-success.html"
     values:
       layout: "page"
+  -
+    scope:
+      path: "project"
+    values:
+      layout: "project"
 
 social_icons:
   - Facebook
