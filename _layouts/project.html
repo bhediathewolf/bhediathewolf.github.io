@@ -15,7 +15,6 @@ layout: default
 <section>
     <div class="blog-ppost text-container">
         <div class="post-content">
-            {% if project %}
                 <ul class="nav nav-inline text-uppercase m-b-3">
                     <li class="nav-item">
                         {% if project_tab != "" %}
@@ -73,9 +72,6 @@ layout: default
                 {% else %}
                     {{ content }}
                 {% endif %}
-            {% else %}
-                <p>Project not found.</p>
-            {% endif %}
         </div>
     </div>
 </section>
