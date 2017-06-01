@@ -11,8 +11,9 @@ layout: default
         <p class="subtext">{{ project.subtitle }}</p>
     </div>
 </section>
+
 <section>
-    <div class="blog-ppost text-container">
+    <div class="blog-post text-container">
         <div class="post-content">
             {% if project %}
                 <ul class="nav nav-inline text-uppercase m-b-3">
@@ -29,7 +30,7 @@ layout: default
                                 <a class="nav-link p-a-1 active" href="#">Gallery</a>
                             {% else %}
                                 <a class="nav-link p-a-1" href="/project/{{ page.project }}/gallery/">Gallery</a>
-                            {5 endif %}
+                            {% endif %}
                         </li>
                     {% endif %}
                     {% if project.has_demo %}
@@ -63,8 +64,9 @@ layout: default
                     {% if project.gallery %}
                         {% for image in project.gallery %}
                             {% capture image_url %}/assests/{{ page.project }}/{{ image }}{% endcapture %}
-                            <img class="img-fluid center-block m-b-2 b-lazy" src=data:image/gif;base64 data-src="{{ image_url }}">
+                            <img class="img-fluid center-block m-b-2 b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="{{ image_url }}">
                         {% endfor %}
+                        <script>+(function() {new Blazy();})();</script>
                     {% else %}
                         <p>There is no gallery for this project.</p>
                     {% endif %}
