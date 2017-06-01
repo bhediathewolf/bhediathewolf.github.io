@@ -14,43 +14,34 @@ layout: default
     </div>
 </section>
 
-<section>
-    <div class="blog-post text-container">
+<section class="pad">
+    <div class="container">
         <div class="post-content">
             {% if project %}
-                <ul class="blog-post">
-                    <li class="blog-post">
+                <ul class="staff">
+                    <li>
                         {% if project_tab != "" %}
                             <div class="button"><a href="/project/{{ page.project }}/">Overview</a></div>
                         {% else %}
-                            <div class="button"><a class="nav-link p-a-1 active" href="#">Overview</a></div>
+                            <div class="button"><a href="#">Overview</a></div>
                         {% endif %}
                     </li>
-                    {% if project.has_gallery %}
-                        <li class="blog-post">
-                            {% if project_tab == "gallery" %}
-                                <div class="button"><a href="#">Gallery</a></div>
-                            {% else %}
-                                <div class="button"><a href="/project/{{ page.project }}/gallery/">Gallery</a></div>
-                            {% endif %}
-                        </li>
-                    {% endif %}
                     {% if project.has_demo %}
-                        <li class="blog-post">
+                        <li>
                             {% if project_tab == "demo" %}
                                 {% capture project_demo_url %}/project/{{ page.project }}/demo/{% endcapture %}
                                 {% if page.url !+ project_demo_url %}
                                     <div class="button"><a href="/project/{{page.project }}/demo/">Demo</a></div>
                                 {% else %}
-                                <div class="button"><a class="nav-link p-a-1 active" href="#">Demo</a></div>
+                                <div class="button"><a href="#">Demo</a></div>
                                 {% endif %}
                             {% else %}
-                                <div class="button"><a class="nav-link p-a-1" href="/project/{{ page.project }}/demo/">Demo</a></div>
+                                <div class="button"><a href="/project/{{ page.project }}/demo/">Demo</a></div>
                             {% endif %}
                         </li>
                     {% endif %}
                     {% if project.has_changelog %}
-                        <li class="blog-post">
+                        <li>
                             {% if project_tab == "changelog" %}
                                 <div class="button"><a href="#">Changelog</a></div>
                             {% else %}
@@ -59,22 +50,10 @@ layout: default
                         </li>
                     {% endif %}
                     {% if project.has_github %}
-                        <li class="blog-post"><div class="button"><a href="{{ project.github }}">Github</a></div></li>
+                        <li><div class="button"><a href="{{ project.github }}">Github</a></div></li>
                     {% endif %}
                 </ul>
-                {% if project_tab == "gallery" %}
-                    {% if project.gallery %}
-                        {% for image in project.gallery %}
-                            {% capture image_url %}/assests/{{ page.project }}/{{ image }}{% endcapture %}
-                            <div class="image"><img class="editable" src=data:image/gif data-src="{{ image_url }}" /></div>
-                        {% endfor %}
-                        <script src="/assets/blazy.min.js">+(function() {new Blazy();})();</script>
-                    {% else %}
-                        <p class="editable">There is no gallery for this project.</p>
-                    {% endif %}
-                {% else %}
                     {{ content }}
-                {% endif %}
             {% else %}
                 <p class="editable">There is no project</p>
             {% endif %}
