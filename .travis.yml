@@ -2,3 +2,10 @@ language: ruby
 rvm:
 - 2.1
 script: "bundle exec jekyll build"
+travis encrypt "insomniacwolves:N7HRuPfXZsq5PqL9PVq73kak" --add notifications.slack
+notifications:
+    slack:
+        template:
+            - "%{repository} (%{branch}) : %{result}"
+            - "%{commit_subject} :"
+            - "%{message}"
