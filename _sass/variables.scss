@@ -4,3 +4,11 @@ $brand-color: #6ba1f3;
 $tablet: "(min-width: 450px)";
 $mid-point: "(min-width: 620px)";
 $desktop: "(min-width: 768px)";
+
+$color-darkblue:        #242a3a;
+$color-darkblue-active: #373c5a;
+$color-lightgray:       #fefefe;
+
+$footer-height:         50px;
+$footer-border-width:   1px;
+$footer-height-inner:   $footer-height - $footer-border-width;
