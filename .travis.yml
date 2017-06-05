@@ -1,5 +1,12 @@
 language: ruby
 rvm:
 - 2.1
-script: "bundle exec jekyll build"
-travis encrypt "insomniacwolves:N7HRuPfXZsq5PqL9PVq73kak" --add notifications.slack
+script: bundle exec jekyll build
+notifications:
+  slack:
+    rooms:
+      secure: jia8zEi5vz6EsNs0wM8aIYekMW8OVJey7MtpEgoVDMh3pv5CHhBd+yySC3Wz+Wg0hOXB5iEittIMvDH/JqV9/1QMJqLfecEdTYJLMWKSXWfFXdR02deFiBrqdE5lYSGBlx2m3ty7NrXdoEbTv9VZ/GCk56l+cfcAz7z6QEDCj9JvTJCpaNfN8/B1elKycaPM1UG1Ba5VZShng2iNtjT9ybvv2uthm4h71c7beK4zqWD7S3WBuS2YKOIpE3UBZD1+69ggAjxg9u5ffiPhjZ8KJ9II1Fjo6yhXD5BZ+iplwJwiCAM9Q8OUA54DkQ5e/uThXgYgVr5VbCCRl6H+pnt2rPyuvdSZAe9i4bdvcpSN9dFgSiKZ1Bpg9XzHj4TqDzzEjuDptZmXTR/5GFRbNFVoxHwGdyMLhA6e1nKo90NY+fGownCL6+A5n8qzR0FA2uvgE7qrZAecKe+kLhMTWr97WMS0ajOPYw8deso/6SDKQ++Pz413NHiKnuA7rcWQMVPZyrPgntFbjMb3j74cOrEYnk7W0GGc2vS3BGXyzfJzUSZ9KL9OVoh1UoTh8M8Un2e33j6dmNvhPYf5S4ZaDymcPr3h3XOh/d9qyCUrjvr4JmjnMWRAvK1ctRsQcwV3gay33AuSQmvPgQ0+KrUndtVy5AZFFQGgw5tHpX+LLrHRR7s=
+    on_start: never
+    on_failure: always
+    on_success: change
+    on_pull_requests: false
