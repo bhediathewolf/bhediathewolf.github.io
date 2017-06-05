@@ -23,11 +23,11 @@ nav {
 	position: relative;
 	top: -7px;
 	text-shadow: none;
+    overflow: hidden;
 
 	@media #{$mid-point} {
 		padding: 0 10px;
 		display: inline;
-        overflow: hidden;
 	}
 
 
