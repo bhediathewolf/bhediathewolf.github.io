@@ -1,9 +1,9 @@
 ---
-title: Tinkerer's Guide to a Github Pages and Jekyll Blog
+title: Tinkerers Guide to a Github Pages and Jekyll Blog
 date: 2017-05-31
 description: An exhaustive guide to a powerful, beautiful and, highly customizable blog using Jekyll and Github Pages
 categories:
-  - technology
+    - technology
 image: {{ site.baseurl }}/assets/tinkerer-guide/tinkerer-banner.png
 ---
 I often came across personal blogs wherein people often documented their encounters with certain softwares which, now, acted as a guide. This resulted in me, at times, romancing the idea of my own blog. I tried various blogging sites like Tumblr, Medium, etc. but I always lacked something; sometimes quality, or viewers, and quite regularly, the motivation. Then, in late April, 2017, I found [Github Pages](https://pages.github.com).
