@@ -26,6 +26,7 @@ _Notice_, the forked repository will now be your-user-name/frisco-jekyll-templat
 
 Go to the settings, and rename the repository to your-user-name.github.io.
 ![alt-text]({{ site.baseurl }}/assets/getting-started/rename.png "Rename the repository")
+
 After this, check your repository's settings to find something like this,
 ![alt-text]({{ site.baseurl }}/assets/getting-started/link.png "Your website is served")
 

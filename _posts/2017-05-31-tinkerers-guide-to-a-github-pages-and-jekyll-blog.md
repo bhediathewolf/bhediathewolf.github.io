@@ -35,7 +35,7 @@ Throughout the guide, I will recreate, essentially, my entire website through a 
 
 Needless to say, if you have any doubts, just comment on relevant on post, or shoot me an email using the contact form.
 
-[1]:
+[1]: https://bhediathewolf.github.io/technology/2017/05/30/tinkerers-guide-to-getting-started-on-github-pages-and-jekyll/
 [2]:
 [3]:
 [4]:
