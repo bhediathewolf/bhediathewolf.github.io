@@ -8,7 +8,7 @@ image: https://source.unsplash.com/LUgHXvLe_kM/2000x1322?a=.png
 ---
 If you read the description above, you have been a little misled. You __will__ have your website; it might require a _little_ additional effort. Worry not, that's what the next chapters are for!
 
-### Getting a Template
+## Getting a Template
 First, let's pick a starting point for our website. We can use the templates [included in the Github Pages gem](https://pages.github.com/themes/) or, we can use a [third party template](https://drjekyllthemes.github.io). There are [many sites](http://lmgtfy.com/?q=jekyll+templates) to browse templates.
 
 Let's pick [frisco](https://github.com/CloudCannon/frisco-jekyll-template) by [CloudCannon](http://cloudcannon.com).
@@ -17,7 +17,7 @@ The template is available  on [Github](https://github.com/CloudCannon/frisco-jek
 
 Now, get yourself an account on [Github](https://github.com/join) or, if you have an account already, [log in](https://github.com/login).
 
-### Fork it before you make it
+## Fork it before you make it
 On the template's github page, click on fork to get something like,
 ![alt-text]({{ site.baseurl }}/assets/getting-started/fork.png "Fork the template")
 It should take no more than 5 minutes.
@@ -31,9 +31,9 @@ After this, check your repository's settings to find something like this,
 
 If it is green, it will be already published at the given link. Otherwise, it will be available after the first commit, if everything works out.
 
-### Local Environment
+## Local Environment
 We will be working with this repository a lot. Github Pages does not require you to build it locally. There is no dire need for it unless you are [using custom plugins](https://blog.sorryapp.com/blogging-with-jekyll/2014/01/31/using-jekyll-plugins-on-github-pages.html). We will setup a small ecosystem to work efficiently with our repository.
-#### Cloning the repository locally
+### Cloning the repository locally
 Let's clone it locally to work more efficiently.
 ```bash
 git clone https://github.com/jekyllblogger/jekyllblogger.github.io.git
@@ -41,7 +41,7 @@ cd jekyllblogger.github.io
 ```
 We have successfully cloned our website locally. 
 
-#### Using [Travis-CI](http://travis-ci.org) for build status
+### Using [Travis-CI](http://travis-ci.org) for build status
 Because we are not locally building our site, we rely on Github Pages for error logs if and when our build fails. From experience, it is not wholesome for the [experimentalist](https://www.merriam-webster.com/dictionary/experimentalist). But, the solution is a very simple one. 
 
 Travis-CI is an online tool, in intregration, with Github, that allows users to deploy their code directly from Github to Travis-CI. This means, even though we are not building it locally on our PC, we are building it someplace other than the Github Pages. Plus, it is very easy to setup travis for our repository.
@@ -87,7 +87,7 @@ exclude:
 ```
 After this, simply commit the changes to your repository. We will still run into errors because frisco is built without Github Pages in mind. It is a standalone Jekyll served website. This means, it has plugins and other sections not supported by Github Pages. We will look at those as we encounter them.
 
-#### Slack Integration with Travis-CI
+### Slack Integration with Travis-CI
 Travis-CI works well but I noticed that it always emails on failure until the state is a success. This is a good practice but clutters your email at times. With such emotion, we will [integrate travis](https://docs.travis-ci.com/user/notifications/#Configuring-slack-notifications) with [Slack](https://slack.com/).
 
 This requires a Slack channel. As I believe not all of you might be interested in this, I am going to assume you have a Slack account and a channel to integrate with. Integration might post to all rooms or a specific one. Here, we will be posting to the room 'build-status'.
@@ -144,6 +144,6 @@ notifications:
     on_pull_requests: false
 ```
 
-### Conclusion
+## Conclusion
 This is end of this post. As promised, you have your website served. Also, you have a nice Travis-CI build with notifications being sent to your Slack. 
 We have traction with our blog, let's develop it further, together.
