@@ -3,7 +3,7 @@ title: Tinkerers Guide to Getting Started on Github Pages and Jekyll
 date: 2017-05-30
 description: By the time you will finish this post, you will have your own website
 categories:
-	- technology
+    - technology
 image: https://source.unsplash.com/LUgHXvLe_kM/2000x1322?a=.png
 ---
 If you read the description above, you have been a little misled. You __will__ have your website; it might require a _little_ additional effort. Worry not, that's what the next chapters are for!
