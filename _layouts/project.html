@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+{% include head.html %}
 {% assign project = site.data.projects[page.project] %}
 {% capture project_tab %}{{ page.dir | remove:"/project/" | remove:page.project | remove_first:"/" | split:"/" | first }}{% endcapture %}
 {% if project.image %}
@@ -63,8 +63,5 @@ layout: default
                 <p class="editable">There is no project</p>
             {% endif %}
         </div>
-
-        {% include advert.html %}
-
     </div>
 </section>

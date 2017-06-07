@@ -2,14 +2,13 @@
 layout: page
 ---
 
+{% include head.html %}
+
 <section>
 	<div class="blog-post text-container">
 		{% include post-title.html post=page %}
         	<div class="post-content">
 			{{ content }}
-
-            {% include advert.html %}
-
 			<div class="blog-navigation">
 				{% if page.previous.url %}
 					<a class="prev" href="{% include relative-src.html src=page.previous.url %}">&laquo; {{ page.previous.title }}</a>
