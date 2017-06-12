@@ -4,26 +4,26 @@ layout: default
 {% include head.html %}
 {% capture scc %}{{ page.category }}{% endcapture %}
 {% case scc %}
-    {% when 'cars' %}
-    {% assign header = "Cars" %}
-    {% assign sub = "Not a matter of convenience, but an extension of man" %}
-    {% assign img = "https://source.unsplash.com/u6BPMXgURuI/2000x1322" %}
-    {% when 'culture' %}
-    {% assign header = "Culture" %}
-    {% assign sub = "The nuances of our society" %}
-    {% assign img = "https://source.unsplash.com/oLhTLD-RBsc/2000x1322" %}
-    {% when 'reviews' %}
-    {% assign header = "Reviews" %}
-    {% assign sub = "The n-th perspective" %}
-    {% assign img = "https://source.unsplash.com/Wg7bvfDf6Ss/2000x1322" %}
-    {% when 'science' %}
-    {% assign header = "Science" %}
-    {% assign sub = "Curiosity killed the cat" %}
-    {% assign img = "https://source.unsplash.com/UmncJq4KPcA/2000x1322" %}
-    {% when 'technology' %}
-    {% assign header = "Technology" %}
-    {% assign sub = "Future is sporadically now" %}
-    {% assign img = "https://source.unsplash.com/mH2v8Aw-ZTM/2000x1322" %}
+    {% when 'engage' %}
+    {% assign header = "Engage" %}
+    {% assign sub = "Stare, and you lose. Be moved." %}
+    {% assign img = "https://source.unsplash.com/dKeB0-M9iiA/2000x1322" %}
+    {% when 'experience' %}
+    {% assign header = "Experience" %}
+    {% assign sub = "What do we own? Objects or memories?" %}
+    {% assign img = "https://source.unsplash.com/ZfUyQD6_Pwk/2000x1322" %}
+    {% when 'know' %}
+    {% assign header = "Know" %}
+    {% assign sub = "Can you fill a book everyone will read?" %}
+    {% assign img = "https://source.unsplash.com/UDKtI9hgyiQ/2000x1322" %}
+    {% when 'invent' %}
+    {% assign header = "Invent" %}
+    {% assign sub = "What is original?" %}
+    {% assign img = "https://source.unsplash.com/-v9Z6-uJxk4/2000x1322" %}
+    {% when 'think' %}
+    {% assign header = "Think" %}
+    {% assign sub = "Why do we think?" %}
+    {% assign img = "https://source.unsplash.com/8FwiZcXiX_g/2000x1322" %}
 {% endcase %}
     <section class="hero" style="background-image: url({{ img }})">
 	<div class="inner-hero text-container">
@@ -39,16 +39,16 @@ layout: default
 		<p class="change-category">All posts categorised under <strong>{{ page.category }}</strong>. <a href="{{ site.baseurl }}/blog/">View all posts</a> instead.</p>
 		<ul class="blog-posts">
 			{% case scc %}
-			    {% when 'cars' %}
-               		{% include list-posts.html posts=site.categories.cars %}
-                {% when 'culture' %}
-                    {% include list-posts.html posts=site.categories.culture %}
-                {% when 'reviews' %}
-                    {% include list-posts.html posts=site.categories.reviews %}
-			    {% when 'science' %}
-			    	{% include list-posts.html posts=site.categories.science %}
-                {% when 'technology' %}
-                    {% include list-posts.html posts=site.categories.technology %}
+			    {% when 'engage' %}
+               		{% include list-posts.html posts=site.categories.engage %}
+                {% when 'experience' %}
+                    {% include list-posts.html posts=site.categories.experience %}
+                {% when 'know' %}
+                    {% include list-posts.html posts=site.categories.know %}
+			    {% when 'invent' %}
+			    	{% include list-posts.html posts=site.categories.invent %}
+                {% when 'think' %}
+                    {% include list-posts.html posts=site.categories.think %}
 			 {% endcase %}
 		</ul>
         <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-592d91bdaa5b6ab8"></script> 
