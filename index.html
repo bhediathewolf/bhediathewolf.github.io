@@ -1,7 +1,7 @@
 ---
 title: Home
 description: A collection of stuff that might surprise you!
-image: https://source.unsplash.com/RFXxBTHze_M/2000x1322?a=.png
+image: https://source.unsplash.com/RFXxBTHze_M/Fixg8KipOg8?a=.png
 bottom_image: https://source.unsplash.com/xc1ukV8p-gY/2000x1322?a=.png
 ---
 
@@ -34,11 +34,18 @@ bottom_image: https://source.unsplash.com/xc1ukV8p-gY/2000x1322?a=.png
 	<section class="info">
 		<div class="container flex">
 			<div class="text">
-				<h2 class="editable">Recent Posts</h2>
+				<h2 class="editable">Behind the Name</h2>
                 <p class="editable">
-                    <ul class="blog-posts">
-                        {% include list-posts.html posts=paginator.posts %}
-                    </ul>
+                So, it's Mid June, I am desperate for a domain name but apparently, all my ideas are already taken. I consult my dad for sometime who is even more clueless about it.
+                </p>
+                <p class="editable">
+                So, I have opened every resource known to mankind, ie, Google, with like 50 tabs. Translating words, and what not. Suddenly, a voice says, "Never Thought So".
+                </p>
+                <p class="editable">
+                That was my dad. Like a miracle, all doors seemed to open up, then.
+                </p>
+                <p class="editable">
+                There is more to the name, though. Our life, as any conspiracy theorist might tell you, is filled with lies. Our brain tends to explain things that seem so irrational in their own right. All it takes is a change in thinking. I guess, you <i>never thought so</i>.
                 </p>
 			</div>
 			<div class="image">
@@ -50,18 +57,11 @@ bottom_image: https://source.unsplash.com/xc1ukV8p-gY/2000x1322?a=.png
 	<section class="info">
 		<div class="container flex">
 			<div class="text">
-				<h2 class="editable">Recent Projects</h2>
+				<h2 class="editable">Welcome</h2>
 				<p class="editable">
-                    <ul class="blog-posts">
-                        {% for project_data in site.data.projects %}
-                            {% assign project_slug = project_data[0] %}
-                            {% assign project = project_data[1] %}
-                            <li class="blog-posts">
-                                <h2><a href="/project/{{ project_slug }}/">{{ project.title }}</a></h2>
-                                <div class="button"><a href="/project/{{ project_slug }}/">Read More</a></div>
-                            </li>
-                        {% endfor %}
-                    </ul>
+                Explore varied content cut from the same fabric. A philosophy that engages you in an internal dialogue, than being just a bland monologue.
+                Invest your time, not waste it. This is not another random guy from the internet. 
+                This is you.
                 </p>
 			</div>
 			<div class="image">
