@@ -12,8 +12,6 @@ Github Pages happened, honestly. It allowed a fairly quick way to get the blog i
 
 It is a skill that is very essential, I believe. And today, I want us to work through our template together with the aim of getting a lay of the Jekyll basics. 
 
-Also, we will be editing the files to our taste, too.
-
 Before we dive in, let's install one of my favorite utilities, `tree`. It allows us to do something like this,
 ```bash
 tree
@@ -115,8 +113,6 @@ Few things to notice are:
 2. `layout`: as we will encounter later, `layout` is the structure of different types of pages you might have. Jekyll is basically storing html in a rigid structure, then, when built, it finds these chunks of html and puts them together with css; voila! Your website is served.
 3. `unsplash`: [Unsplash](https://unsplash.com) is a photo sharing site with original photos. The best part is that they are very free to use. These photos are professionally taken shots that are being uploaded by photographers, and curated by moderators. It is a beautiful website, don't blame me for your addiction.
 
-I am going to make those changes and, commit. You, too, should make appropiate changes as you deem fit. Anything works as long as nothing on the left side `:` is messed with, for now.
-
 ## about.html
 This is, again, an obvious page. This is the page where we introduce the website, and ourselves.
 
@@ -126,5 +122,30 @@ On comparing this with the previous page, we are missing `layout`.
 
 Let's open the website alongside too. We can relate that whatever that within the first `<section>` tag is only the background picture and, the page title and description.
 
-Everything within the other section is the content on white.
+Everything within the other section is the content on white. Amazingly, it lists staff members. It is good idea for a blog that is maintained by multiple people or even product sites with team profiles, maybe.
+
+## apple-touch-icon.png, touch-icon.png and, siteicon.png
+These are almost all the same. These could be the icon on the top left corner. A practice to find where they fit in is to either change them or remove them temporarily to gauge from errors or changes, what is their function?
+
+## blog
+The `blog` folder is the essentially a placeholder for the permalink `jekyllblogger.github.io/blog`. It has an `index.html` to be loaded when someone goes to that link. 
+
+`index.html` itself is similar to the `about.html`, in terms of two sections; one for the banner with the title, the other for the content.
+
+Content itself is similar through the use of similar `{% include ... %}` and `{% if ... %}`. 
+Discussing them, they are sort of text manipulators. Jekyll has two text manipulation agents, syntactically, they are `{{ ... }}` and `{% ... %}`. Now, the double braces are basically placeholders. They are an indication of what actual text will be there. Remember, Jekyll actually creates html files by putting together chunks of code.
+`{% .. %}` is the real manipulator that allows for various activities to be performed on text through the means of `if` or `for` statements.
+
+Another thing to notice is are the `<div>` tag classes. These will be useful when creating a new page.
+
+## \_config.yml
+`_config.yml` is the configuration for the Jekyll site. It is an instruction set as to how to go about developing the website. It has a list of variables with values and, keywords. If you see code lines 7 through 9, those are your variables.
+
+Line 12 explains to us that `siteicon.png` is the logo. Where is it used? We might gain that knowledge at a later stage.
+
+Now, `gems` are `ruby` packages; the ones in our `_config.yml` are those plugins we are using.
+
+Because we are usign a template built for Jekyll not Github Pages specifically, we will have issues with some plugins.
+
+There are default values set, too. A quick inspection tells us, that for all paths (`path:""`) the pages have default layout, but under specific paths or type, the layout may differ. It is like saying, one loves vanilla ice cream but if there is a chocolate one available, that's what they will go for. Additionally, when they are on the beach, they want butterscotch ice cream. 
 
