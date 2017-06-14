@@ -20,6 +20,10 @@ layout: default
     {% assign header = "Invent" %}
     {% assign sub = "What is original?" %}
     {% assign img = "https://source.unsplash.com/-v9Z6-uJxk4/2000x1322" %}
+    {% when 'revolt' %}
+    {% assign header = "Revolt" %}
+    {% assign sub = "What makes you cringe?" %}
+    {% assign img = "https://source.unsplash.com/FgPGGFlY1gY/2000x1322" %}
     {% when 'think' %}
     {% assign header = "Think" %}
     {% assign sub = "Why do we think?" %}
@@ -47,6 +51,8 @@ layout: default
                     {% include list-posts.html posts=site.categories.know %}
 			    {% when 'invent' %}
 			    	{% include list-posts.html posts=site.categories.invent %}
+                {% when 'revolt' %}
+                    {% include list-posts.html posts=site.categories.revolt %}
                 {% when 'think' %}
                     {% include list-posts.html posts=site.categories.think %}
 			 {% endcase %}
