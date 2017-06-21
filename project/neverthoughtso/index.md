@@ -25,4 +25,4 @@ The website uses:
 
 Using Github Pages and the amount of work put into it is a personal choice because the more you invest into building the site itself, the more options you will get. If you are looking for a one time setup and leave site, Github Pages is the way to go. That's how it was intended.
 If you are looking for something with more freedom, you can always ditch Github Pages for Amazon S3, another free hosting service for static sites. This relieves you of certain restrictions Github puts on you when using Github Pages.
-This website uses licensed images from ![Unsplash](unsplash.com). It is an online community where talented artists put their truly amazing work. The best part is that these are free for commercial use. They even have special url formatting for fetching images in different formats or resolution.
+This website uses licensed images from [Unsplash](unsplash.com). It is an online community where talented artists put their truly amazing work. The best part is that these are free for commercial use. They even have special url formatting for fetching images in different formats or resolution.
