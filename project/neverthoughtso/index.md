@@ -1,5 +1,5 @@
 ---
-title: NeverThoughtSo! A Github Pages hosted blog using Jekyll
+title: Never Thought So!
 project: neverthoughtso
 ---
 
