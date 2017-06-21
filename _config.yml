@@ -23,7 +23,10 @@ social:
 
 # Build
 markdown: kramdown
-highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_hightlighter: rouge
 
 permalink: pretty
 
