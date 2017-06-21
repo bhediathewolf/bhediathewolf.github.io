@@ -1,6 +1,7 @@
 ---
 title: NeverThoughtSo! A Github Pages hosted blog using Jekyll
 project: neverthoughtso
+github: http://github.com/bhediathewolf/bhediathewolf.github.io
 ---
 
 $10
