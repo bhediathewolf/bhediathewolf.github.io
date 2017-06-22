@@ -3,26 +3,73 @@ title: Never Thought So!
 project: neverthoughtso
 ---
 
-$10
+# Never Thought So
 
-The cost of this website.
+Never Thought So is a Jekyll served blog hosted on Github Pages. Additionally, it uses various third party tools for intergration.
+This website is available at [https://neverthoughtso.com](https://neverthoughtso.com).
 
-NeverThoughtSo! is a website that is an amalgamation of the free tools available online. It is hosted on Github Pages for free. Github Pages uses Jekyll to render static sites.
+## Getting Started
 
-Jekyll has a rigid structure within which it allows criminal levels of freedom. It has been built with blogging in mind. It extends Liquid into something more blog centric, though it's not far off.
+You can either clone this site or the template I started with. Several parts have modified or added to the template to tailor it to Github Pages. These changes are not required if a different hosting service is  being used because GHPages levies certain restrictions to it's builds.
+You can clone this project or the template on your local machine with following instructions.
 
-The website uses:
-- Github Pages for hosting, _free_
-- GoDaddy's .com domain, _$10_
-- CloudCannon's Frisco free theme, _free_
-- AddThis Share Button, _free_
-- AddThis Subscription Form, _free_
-- Google Analytics, _free_
-- Google Search Console, _free_
-- Disqus Comments, _free_
-- Travis CI for builds, _free_
-- CloudFlare CDN and SSL, _free_
+### Prerequisites
 
-Using Github Pages and the amount of work put into it is a personal choice because the more you invest into building the site itself, the more options you will get. If you are looking for a one time setup and leave site, Github Pages is the way to go. That's how it was intended.
-If you are looking for something with more freedom, you can always ditch Github Pages for Amazon S3, another free hosting service for static sites. This relieves you of certain restrictions Github puts on you when using Github Pages.
-This website uses licensed images from [Unsplash](unsplash.com). It is an online community where talented artists put their truly amazing work. The best part is that these are free for commercial use. They even have special url formatting for fetching images in different formats or resolution.
+The following dependencies are which I know of, if you find anything is missing, do let me know.
+
+```bash
+git
+ruby
+gem
+jekyll
+```
+
+If you plan on building directly on the server and not locally, you only need `git`.
+
+### Installing
+
+For hosting on Github Pages using this site:
+1. Fork it on Github with the repository name as `yourusername.github.io`
+* First clone this repository as follows:
+![alt]({{ site.baseurl }}/assets/neverthoughtso/wheretoclick.png)
+![alt]({{ site.baseurl }}/assets/neverthoughtso/forking.png)
+* Then, rename this repository as `yourname.github.io`
+
+2. Clone locally
+```bash
+git clone https://github.com/yourusername/yourusername.github.io
+```
+
+3. Make changes
+```bash
+//If you create new files, be sure to add them to git as follows:
+git add filename
+//Once you are done making changes to a particular file, commit them:
+git commit filename -m "Commit message"
+//Once you are done with the changes, push these changes to the server:
+git push
+```
+
+For cloning this repository:
+```bash
+git clone https://github.com/bhediathewolf/bhediathewolf.github.io
+```
+
+## Built With
+
+* [Github Pages](https://pages.github.com) - Used for hosting
+* [Jekyll](https://jekyllrb.com) - Parsing engine used by Github Pages to generate static sites
+* [CloudFlare](https://cloudflare.com) - Content Delivery Network used for SSL
+* [AddThis](http://addthis.com) - Used for Share buttons and Pop up Subscriber form 
+* [Disqus](https://disqus.com) - Used for comments on posts
+* [TravisCI](https://travisci.org) - Used for online build test; GHPages aren't that useful with errors
+
+## License
+
+This project is licensed under [Apache 2.0]({{site.baseurl}}/LICENSE).
+
+## Acknowledgements
+
+* [CloudCannon](https://github.com/CloudCannon/frisco-jekyll-template) - This template allowed for much cleaner product code than I could have independently done
+* [Unsplash](https://unsplash.com) - They will redefine commercial nature of photography with amazing work and such great content
+* [MindDust](https://github.com/minddust) - His blog's repository allowed for me add Project Page to my blog
