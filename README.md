@@ -1,8 +1,3 @@
----
-title: Never Thought So!
-project: neverthoughtso
----
-
 # Never Thought So
 
 Never Thought So is a Jekyll served blog hosted on Github Pages. Additionally, it uses various third party tools for intergration.
