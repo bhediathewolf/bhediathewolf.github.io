@@ -11,3 +11,9 @@ timelocker:
     has_demo: false
     has_github: true
     github: https://github.com/bhediathewolf/timelocker
+
+calligraphy:
+    title: Calligraphy
+    subtitle: A handwriting recognition app that converts your written notes to PDF for you to share
+    has_demo: false
+    has_github: false
