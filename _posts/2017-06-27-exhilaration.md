@@ -39,7 +39,7 @@ The fun part is how accomplishments, with time, humble us more than them, especi
 There is a bitter sweet taste in accomplishing something against the odds.
 In the most premature nature, this exists in procrastinators who outperform themselves under pressure.
 A [2009 study](https://www.ncbi.nlm.nih.gov/pubmed/19425357 "Choi, J. N., & Moran, S. V. (2009)") outlining _active procrastination_ "found that active procrastinators did possess desirable behavioral and attitudinal characteristics, leading to positive personal outcomes."
-I shall even go out on a limb to claim these individuals are fear monotony and blandness of the work environment.
+I shall even go out on a limb to claim these individuals fear monotony and blandness of the work environment.
 This is often supplemented with a casual disregard for the more societal essentials like money.
 These individuals' drive for stimulation is more morally instilled than their peers.
 
