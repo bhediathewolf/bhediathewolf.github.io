@@ -3,7 +3,7 @@ title: Exhilaration in Exhaustion
 date: 2017-06-27
 description: How frustration of inaction inspires innovation
 categories:
-	- think
+  - think
 image: https://source.unsplash.com/uYkdJEYNwSM/2000x1322?a=.png
 ---
 An adventure aficionado seeks thrill in her ability to come out unscathed from a truly endearing experience.
