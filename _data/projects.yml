@@ -9,8 +9,7 @@ timelocker:
     title: Time Locker
     subtitle: A Linux utility that helps you tinker with your system without any permanent damage
     has_demo: false
-    has_github: true
-    github: https://github.com/bhediathewolf/timelocker
+    has_github: false
 
 calligraphy:
     title: Calligraphy
